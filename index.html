@@ -1,1 +1,61 @@
-:)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Moon Phase Widget</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table width="800" border="0" cellpadding="0" cellspacing="0">
+  <!--DWLayoutTable-->
+  <tr>
+    <td height="42" colspan="2" valign="top" class="topic">Moon Phase Widget</td>
+  </tr>
+  <tr>
+    <td width="488" height="761" valign="top" class="text"><p>      <span class="subtopic">Method 1 : Displaying the current phase</span><br />
+      Put this code in to your html file's body..<br />
+      <br />
+      <label>
+        <textarea name="textarea" cols="60" rows="3"  readonly="readonly" class="code" id="textarea"><iframe src="http://www.skylk.com/moonphase/moonp.php" height="255" width="165" scrolling="no" frameborder="0" ></iframe>
+</textarea>
+        </label>
+    </p>
+      <p><span class="subtopic">Method 2 : Displaying the  phase for a specific date</span><br />
+        You can pass variables to the php page through the iframe. This method can be used to display a phase in an iframe for a specific date.<br />
+      </p>
+      <p>The format for passing variables is as follows:<br />
+       http://anu3d.info/embed/moonp.php?y=<em>year</em>&amp;m=<em>month</em>&amp;d=<em>day</em></p>
+      <p>This example show the phase inside an iframe for the date 27th Jan 2012.</p>
+      <p>
+        <textarea name="textarea2" cols="60" rows="3" readonly="readonly" class="code" id="textarea2"><iframe src="http://www.skylk.com/moonphase/moonp.php?y=2012&amp;m=1&amp;d=27" height="255" width="165" scrolling="no" frameborder="0" ></iframe>
+        </textarea>
+      </p>
+      <p><span class="subtopic">Method 3 : Displaying the  phase for a specific date</span><br />
+        This method is used to display the phase in a browser window (no iframe). Click the link to see the moon phase in a new window.</p>
+      <p>ex : <a href="http://www.skylk.com/moonphase/moonp.php?y=2012&amp;m=1&amp;d=27" target="_blank">http://www.skylk.com/moonphase/moonp.php?y=2012&amp;m=1&amp;d=27</a></p>
+    <p>To show the current phase just drop the variables in the url righ after &quot;.php&quot;.</p>
+    <p><span class="subtopic">The Joomla module</span><br />
+    if you're putting this on your joomla site you may find it impossible to embed the above code. Use the Joomla module instead.</p>
+    <p><a href="/mod_ajmoonphase.zip">Moon Phase Joomla Module - mod_ajmoonphase.zip (2kb)</a></p>
+    <hr />    <p><strong>Acuracy</strong>: The phase of the moon is calculated using  simple mathematics. This widget is still in beta stage so if you find any errors please report them to me by email : admin[at]skylk.com (relace [at] with @)</p>
+    <p><strong>How it works </strong>: The widget is made with php. So you don't need flash or anything installed for this to work. However the widget will not work offline. You need to have internet connected for this to work.</p>
+    <p><strong>Changing the iframe size</strong>: The above code already contains proper i frame width and height. Changing this values may result the widget to align incorrectly. Always use the above settings.</p>
+    <p>If you encounter bugs or if you have any ideas to improve this contact  me .. email : admin[at]skylk.com</p>
+    <p>&nbsp;</p>
+    <p> Anuradha Jayathilaka (Colombo, Sri Lanka)</p>
+    <p>2010 &copy; All rights reserved.</p></td>
+    <td width="312" rowspan="2" align="center" valign="top" class="text">Current moon phase<br />
+      <iframe src="http://www.skylk.com/moonphase/moonp.php" height="255" width="165" scrolling="no" frameborder="0" ></iframe>
+        <p>&nbsp;</p>
+        <p>Moon phase for 2012/1/27<br />
+        </p>
+    <iframe src="http://www.skylk.com/moonphase/moonp.php?y=2012&amp;m=1&amp;d=27" height="255" width="165" scrolling="no" frameborder="0" ></iframe></td>
+  </tr>
+  
+  <tr>
+    <td height="7"></td>
+  </tr>
+</table>
+</body>
+</html>
