@@ -74,23 +74,19 @@ if ($_GET['d']<>""){
 	$m=date('m');
 }
 		
-function MoonAge( $d,  $m,  $y)
-{ 
+function MoonAge( $d,  $m,  $y) { 
     $j = JulianDate($d, $m, $y);
-    //Calculate the approximate phase of the moon
     $ip = ($j + 4.867) / 29.53059;
     $ip = $ip - floor($ip); 
-    //After several trials I've seen to add the following lines, 
-    //which gave the result was not bad 
     if($ip < 0.5)
         $ag = $ip * 29.53059 + 29.53059 / 2;
     else
         $ag = $ip * 29.53059 - 29.53059 / 2;
-    // Moon's age in days
     $ag = floor($ag) + 1;
     return $ag;
 }
-function JulianDate($d,$m,$y){
+
+function JulianDate($d,$m,$y) {
     $yy = $y - (int)((12 - $m) / 10);
     $mm = $m + 9;
     if ($mm >= 12)
@@ -100,24 +96,22 @@ function JulianDate($d,$m,$y){
     $k1 = (int)(365.25 * ($yy + 4712));
     $k2 = (int)(30.6001 * $mm + 0.5);
     $k3 = (int)((int)(($yy / 100) + 49) * 0.75) - 38;
-    // 'j' for dates in Julian calendar:
     $j = $k1 + $k2 + $d + 59;
     if ($j > 2299160)
     {
-        // For Gregorian calendar:
-        $j = $j - $k3; // 'j' is the Julian date at 12h UT (Universal Time)
+        $j = $j - $k3; 
     }
     return $j;
 }
+
 ?>
 <table width="160" border="0" cellpadding="0" cellspacing="0" class="bak">
-  <!--DWLayoutTable-->
   <tr>
     <td width="160" height="33" valign="top" class="title">Moon Phase</td>
   </tr>
   
   <tr>
-    <td height="119" valign="top" class="image"><a href="http://www.skylk.com" target="_blank"><img src="phases/<? echo MoonAge($d,$m,$y);?>.jpg" border="0"/></a></td>
+    <td height="119" valign="top" class="image"><a href="http://moon-phase-widget.herokuapp.com" target="_blank"><img src="phases/<? echo MoonAge($d,$m,$y);?>.jpg" border="0"/></a></td>
   </tr>
   <tr>
     <td height="55" valign="top" class="date"><? echo "Date : " . $y ."-" . $m ."-" .  $d; ?><br />      <p class="pname">
@@ -162,7 +156,7 @@ echo $pname; ?>
   </tr>
   <tr>
     <td height="43" valign="top" class="poweredby">Powered by <a href="http://www.skylk.com" target="_blank">www.skylk.com</a><br />
-      <span class="style1"><a href="http://www.skylk.com/moonphase/moon_phase_widget_help.html" target="_blank">Embed this on to your website/blog</a></span></td>
+      <span class="style1"><a href="http://moon-phase-widget.herokuapp.com" target="_blank">Embed this on to your website/blog</a></span></td>
   </tr>
 </table>
 <script type="text/javascript">
