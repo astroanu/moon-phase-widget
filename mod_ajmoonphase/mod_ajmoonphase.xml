@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+    <name>Moon Phase</name>
+    <author>Anuradha Jayathilaka</author>
+	<creationDate>Nov26, 2010</creationDate>
+	<authorEmail>me@anu3d.info</authorEmail>
+	<authorUrl>http://www.skylk.com/moonphase/moon_phase_widget_help.html</authorUrl>
+    <version>1.0</version>
+    <licence>GNU/GPL http://www.gnu.org/licenses/gpl.html</licence>
+	<description>
+    	<![CDATA[Module to show current moon phase or show phase for a given date]]>
+	</description>
+	
+    <files>
+        <filename module="mod_ajmoonphase">mod_ajmoonphase.php</filename>
+        <filename>index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+ <params>
+    	<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	<param name="@spacer" type="spacer" default="" label="" description="" />
+        <param name="Year" type="text" size="4" default="" label="Year" description="Year" />
+        <param name="Month" type="text" size="2" default="" label="Month" description="Month" />
+        <param name="Day" type="text" size="2" default="" label="Day" description="Day" />
+    </params>
+</install>
